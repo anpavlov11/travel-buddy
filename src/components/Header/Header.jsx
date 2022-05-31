@@ -1,8 +1,27 @@
 import React from 'react';
+import { Autocomplete } from '@react-google-maps/api';
+import { AppBar, ToolBar, Typography, InputBase, Box } from '@material-ui/core';
+import { CallMissedSharp } from '@material-ui/icons';
 
 const Header = () => {
     return (
-        <h1>Header</h1>
+        <AppBar position='static'>
+            <ToolBar className={CallMissedSharp.toolbar}>
+                <Typography variant='h5' className={classes.title}>
+                    Travel Buddy
+                </Typography>
+                <Box display='flex'>
+                <Typography variant='h6' className={classes.title}>
+                    Find Places
+                </Typography>
+                <Autocomplete>
+                    <div className={classes.search}>
+                        <InputBase placeholder='Search...' classes={{ root: classes.inputRoot, input: classes.inputInput }} />
+                    </div>
+                </Autocomplete>
+                </Box>
+            </ToolBar>
+        </AppBar>
     );
 }
 export default Header;
