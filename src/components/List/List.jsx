@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// eslint-disable-next-line
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
 import PlaceInfo from '../PlaceInfo/PlaceInfo';
 import useStyles from './styles';
